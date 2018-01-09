@@ -3,7 +3,7 @@
     <mapper namespace="com.springapp.Repository.IUserService">
         <resultMap id="BaseResultMap"
                    type="com.springapp.entity.User">
-            <id column="id" property="id" javaType="Integer"/>
+            <id column="id" property="id" jdbcType="BIGINT"/>
             <result column="user_name" property="userName" jdbcType="VARCHAR"/>
             <result column="password" property="password" jdbcType="VARCHAR"/>
             <result column="age" property="age" jdbcType="BIGINT"/>
@@ -18,17 +18,17 @@
         SELECT
         <include refid="Base_Column_List"/>
         from user_t WHERE  1=1
-        <if test="_parameter!=null">
-            AND  id=#{User.id}
+        <if test="id!=null">
+            AND  id=#{id}
            </if>
-        <!--   <if test="_parameter!=null">
-             AND  userName=#{User.userName}
-                 </if>>
-         <if test="_parameter!=null">
-             AND  password=#{User.userName}
-         </if>>
-         <if test="_parameter!=null">
-             AND  age=#{User.userName}
-         </if>>  -->
+           <if test="userName!=null">
+             AND  user_name=#{userName}
+                 </if>
+         <if test="password!=null">
+             AND  password=#{password}
+         </if>
+         <if test="age!=null">
+             AND  age=#{age}
+         </if>
     </select>
 </mapper>

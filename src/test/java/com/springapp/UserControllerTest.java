@@ -15,22 +15,22 @@ import java.util.List;
  */
 @ContextConfiguration({ "classpath:applicationContext.xml"})
 public class UserControllerTest {
-
-    @Autowired
-    protected IUserService iUserService;
-
-//    User user=new User();
-    @Test
-    public void userTest(){
-//        user.setUserName("haiqiang");
-//        user.setId(2);
-//        user.setAge(8);
-//        user.setPassword("123456");
-            try{
-               List<User> users= iUserService.getUserById(1);
-                System.out.print(users);
-            }catch (Exception e){
-                System.out.print(e);
-            }
-    }
+//
+//    @Autowired
+//    protected IUserService iUserService;
+//
+////    User user=new User();
+//    @Test
+//    public void userTest(){
+////        user.setUserName("haiqiang");
+////        user.setId(2);
+////        user.setAge(8);
+////        user.setPassword("123456");
+//            try{
+//               List<User> users= iUserService.getUserById(1);
+//                System.out.print(users);
+//            }catch (Exception e){
+//                System.out.print(e);
+//            }
+//    }
 }

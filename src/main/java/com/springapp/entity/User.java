@@ -15,11 +15,9 @@ public class User {
     public User(){
         super();
     }
-    public  User(Integer id,String userName,String password,Integer age){
+    public  User(Integer id,String userName){
         this.id=id;
         this.userName=userName;
-        this.password=password;
-        this.age=age;
     }
 
     public Integer getId() {

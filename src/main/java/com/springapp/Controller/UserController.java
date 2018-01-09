@@ -14,13 +14,15 @@ import java.util.List;
  */
 @Controller
 public class UserController {
-//    @Autowired
-//    IUserServiceImpl iUserServiceImpl;
+    @Autowired
+    IUserServiceImpl iUserServiceImpl;
     public void printCmd(User user){
-          List<User> userlist=null;
+          List<User> userlist = null;
+        System.out.print(iUserServiceImpl);
         try{
-//            userlist=iUserServiceImpl.getUserById(1);
+            userlist=iUserServiceImpl.getUserById(user);
         }catch (Exception e){
+           System.out.print(e);
             return;
         }
 

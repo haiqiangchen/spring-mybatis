@@ -11,5 +11,5 @@ import java.util.List;
  */
 @Repository
 public interface IUserService {
-     List<User> getUserById(Integer id);
+     List<User> getUserById(User user);
 }

@@ -12,13 +12,14 @@ import java.util.List;
 /**
  * Created by haiqiang on 2017/12/19.
  */
-
+@Service
 public class IUserServiceImpl implements IUserService {
+    @Qualifier("IUserService")
     @Autowired
     IUserService userService;
     @Override
-    public List<User> getUserById(Integer id) {
+    public List<User> getUserById(User user) {
 
-        return userService.getUserById(id);
+        return userService.getUserById(user);
     }
 }

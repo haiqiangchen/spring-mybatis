@@ -18,13 +18,14 @@ import java.util.List;
 @ContextConfiguration({ "classpath:applicationContext.xml"})
 public class IUserServiceTest {
     @Autowired
-   public IUserService userService;
+    UserController userController;
     @Test
     public void getUserByIdTest(){
-        List<User> user=userService.getUserById(1);
-        for(int i=0;i<user.size();i++){
-           System.out.println(user.get(i).getUserName());
-        }
+        User user=new User(2,"haiqiang");
+       userController.printCmd(user);
+//        for(int i=0;i<user.size();i++){
+//           System.out.println(user.get(i).getUserName());
+//        }
     }
 
 }
